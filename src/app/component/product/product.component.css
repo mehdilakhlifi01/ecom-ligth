@@ -1,0 +1,27 @@
+.heigted{
+  height: 420px;
+}
+
+.long{
+  height: 200px;
+  width: 400px;
+}
+.style{
+  font-size: 15px;
+  text-align: center;
+
+}
+
+.stylee{
+  font-size: 16px ;
+  font-weight:bold;
+  text-align: center;
+
+
+}
+.page{
+  margin: 0 auto;
+  width: 300px;
+}
+
+

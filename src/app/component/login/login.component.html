@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+      <div class="panel-heading" >Authentification</div>
+      <div class="panel-body">
+        <form #f="ngForm" (ngSubmit)="onLogin(f.value)" >
+          <div class="form-group">
+            <label class="control-label" >UserName</label>
+            <input type="text" name="username" ngModel class="form-control" >
+          </div>
+          <div class="form-group">
+            <label class="control-label" >Password</label>
+            <input type="password" name="password" ngModel class="form-control" >
+          </div>
+          <button type="submit" class="btn btn-success btn-block" > Login </button>
+        </form>
+        <div class="text-center">
+          <p>or ...</p>
+          <a routerLink="/register" class="btn btn-danger mb-3">Create account</a>
+        </div>
+      </div>
+
+
+</div>
+
+
+
+
+

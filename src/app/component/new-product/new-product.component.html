@@ -1,0 +1,32 @@
+<form #f="ngForm" (ngSubmit)="add(f.value)" >
+  <div class="form-group">
+    <label for="price">CurrentPrice</label>
+    <input type="number" name="currentPrice" ngModel [(ngModel)]="product.currentPrice"   class="form-control" id="price">
+  </div>
+  <div class="form-group">
+    <label for="available">Available:</label>
+    <input type="number" name="available" ngModel [(ngModel)]="product.available"  class="form-control" id="available">
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input type="text" name="description" ngModel [(ngModel)]="product.description"  class="form-control" id="description">
+  </div>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" name="name" ngModel [(ngModel)]="product.name"  class="form-control" id="name">
+  </div>
+  <div class="form-group">
+    <label for="promo">Promotion:</label>
+    <input type="number" name="promotion" ngModel [(ngModel)]="product.promotion"  class="form-control" id="promo">
+  </div>
+  <div class="form-group">
+    <label for="selected">Selected:</label>
+    <input type="number" name="selected" ngModel [(ngModel)]="product.selected"  class="form-control" id="selected">
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">PhotoName:</label>
+    <input type="text" ngModel name="photoName" [(ngModel)]="product.photoName"  value="unknown.png"  class="form-control" id="pwd">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

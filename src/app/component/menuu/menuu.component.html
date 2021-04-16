@@ -1,0 +1,195 @@
+<div class="container-fluid">
+  <div class="row">
+    <!--Menu-->
+    <div class="col-sm-3">
+      <div class="nav-side-menu bs" style="background-color: brown;">
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"> </i>
+        <div class="menu-list">
+          <ul id="menu-content"  class="menu-content collapse out">
+
+            <!--Carte-->
+            <li data-toggle="collapse" data-target="#newcarte" class="collapsed">
+              <i class="fa fa fa-credit-card fa-lg">    </i>
+              Carte
+              <span class="arrow"></span>
+            </li>
+            <!--Les options de la carte-->
+            <ul
+              class="sub-menu collapse"
+              id="newcarte">
+              <!--Gestion des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/gestionCarte'">
+                  Gestion des cartes
+                </a>
+              </li>
+              <!--Renouvelement des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  href=""
+                  [routerLink]="'/renouvelementCarte'">
+                  Renouvelement des cartes
+                </a>
+              </li>
+              <!--Recahargement des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/rechargementCarte'">
+                  Rechargement des cartes
+                </a>
+              </li>
+              <!--Etats des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  href=""
+                  [routerLink]="'/etatCarte'">
+                  Etats des cartes
+                </a>
+              </li>
+              <!--Activation des cartes -->
+              <li
+                routerLinkActive="active">
+                <a
+                  href=""
+                  [routerLink]="'/activationCarte'">
+                  Activation des cartes
+                </a>
+              </li>
+              <!--Désactivation des cartes -->
+              <li
+                routerLinkActive="active">
+                <a
+                  href=""
+                  [routerLink]="'/desactivationCarte'">
+                  Désactivation des cartes
+                </a>
+              </li>
+              <!--Annulation des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  href=""
+                  [routerLink]="'/annulationCarte'">
+                  Annulation des cartes
+                </a>
+              </li>
+              <!--Opposition des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  href=""
+                  [routerLink]="'/oppositionCarte'">
+                  Oppositions des cartes
+                </a>
+              </li>
+            </ul>
+
+            <!--Paramétrage  -->
+            <li
+              data-toggle="collapse"
+              data-target="#param"
+              class="collapsed">
+              <i
+                class="fa fa-cogs fa-lg">
+              </i>
+              Paramétrage
+              <span
+                class="arrow">
+                            </span>
+            </li>
+            <!--Les options des paramétrages-->
+            <ul
+              class="sub-menu collapse" id="param">
+              <!--Tarifs des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/tarifCarte'">
+                  Tarif des cartes
+                </a>
+              </li>
+              <!--Plafonds des cartes -->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/plafondCarte'">
+                  Plafond  des cartes
+                </a>
+              </li>
+              <!--Opposition de carte -->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/oppositionParamCarte'">
+                  Opposition des cartes
+                </a>
+              </li>
+              <!--Type des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/typeCarte'">
+                  Types des cartes
+                </a>
+              </li>
+              <!--BIN-->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/BIN'">
+                  BIN
+                </a>
+              </li>
+              <!--Banque-->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/banque'">
+                  Banque
+                </a>
+              </li>
+              <!--Reseau d'acceptation-->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/reseauAcceptation'">
+                  Réseau d'acceptaion
+                </a>
+              </li>
+              <!--Service des cartes-->
+              <li
+                routerLinkActive="active">
+                <a
+                  [routerLink]="'/service'">
+                  Services des cartes
+                </a>
+              </li>
+            </ul>
+            <!--Commerçant-->
+            <li
+              data-toggle="collapse"
+              data-target="#commer"
+              class="collapsed">
+              <i
+                class="fa fa-shopping-cart fa-lg">
+              </i>
+              Commerçant
+              <span
+                class="arrow">
+                            </span>
+            </li>
+            <!--Les options de Commerçant fa-gavel-->
+            <ul
+              class="sub-menu collapse" id="commer">
+
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>

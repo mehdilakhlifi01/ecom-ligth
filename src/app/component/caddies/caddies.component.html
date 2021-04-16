@@ -1,0 +1,37 @@
+<div class="container" >
+  <div class="panel panel-heading">
+    <div class="panel-heading">Panier</div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead class="thead-light">
+        <tr>
+          <th>Produits</th><th>Name</th><th>Quantity</th><th>Prix</th><th>Supprimer</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let p of getBindedAuthors"  >
+          <td> <img class="img-thumbnail img-rounded " width="250px" height="10px" src="{{this.catService.host+'/photoProduct/'+p.products.id+'?ts='+getTimest()}}"/></td>
+          <td>{{p.products.name}}</td>
+          <td>{{p.products.quantity}}</td>
+          <td>{{p.products.currentPrice}} DH</td>
+          <td>
+            <button class="btn btn-danger" (click)="onRemoveProductFromCaddy(p.products.id)">
+              <span class="glyphicon glyphicon-remove" ></span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"  > Total</td>
+          <td>{{caddyService.getTotal()}} DH </td>
+        </tr>
+        <tr>
+          <td colspan="4" >
+            <button class="btn btn-success btn-block" (click)="onNewOrder()">Commander</button>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+
+</div>
+

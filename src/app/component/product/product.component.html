@@ -1,0 +1,69 @@
+<div *ngIf="att==1">
+  <app-carousel></app-carousel>
+</div>
+<div *ngIf="products" >
+
+<div *ngFor="let p of products._embedded.products |paginate: { id : 'list_pagination',
+               itemsPerPage:12,
+               currentPage: page,
+                totalItems: totalRecords}
+                , index as i " >
+
+    <div class=" col-md-3">
+        <div class="panel panel-default heigted">
+
+            <div class="panel panel-heading style " >
+               <b>{{p.name}}</b>
+             </div>
+             <div class="panel-body" >
+
+               <img
+
+                 class="img-thumbnail img-rounded btn long"
+                     height="150"
+                    (click)="onProductDetail(p)"
+                     src="{{this.catService.host+'/photoProduct/'+p.id+'?ts='+getTimest()}}"/>
+
+
+               <div *ngIf="isAuth() && isAdmin() "><button (click)="onEditPhoto(p)"><span class="glyphicon glyphicon-edit" ></span></button>
+                 <p *ngIf="editPhoto && currentProduct==p">
+                   <input type="file" (change)="onSelectedFile($event)">
+                   <button [disabled]="!selectedFiles" class="btn btn-success" (click)="upload()" >Upload</button>
+                 </p>
+               </div>
+               <div>
+                 {{p.discription}}
+               </div>
+               <div>
+                 <label> PRIX:{{p.currentPrice | number:'3.2-2'}} DH</label>
+               </div>
+               <div>
+                 <span *ngIf="p.promotion">
+                   <img src="assets/images/promo.png" class="img-thumbnail img-circle" height="30" >
+                 </span>
+                 <span *ngIf="p.selected">
+                   <img src="assets/images/favorite.png" class="img-thumbnail img-circle" height="30" >
+                 </span>
+                 <span *ngIf="p.available">
+                   <img src="assets/images/available.png" class="img-thumbnail img-circle" height="30" >
+                 </span>
+                 <div>
+                   <form #f="ngForm" (ngSubmit)="onAddProductToCaddy(p)">
+                       <label>Quantité:</label>
+                     <input type="number" name="quantity" ngModel style="width:40px" [(ngModel)]="p.quantity" >
+                     <button class="btn btn-warning" > Ajouter au Panier</button>
+                   </form>
+
+                 </div>
+               </div>
+
+
+             </div>
+                   </div>
+            </div>
+     </div>
+</div>
+
+<div class="page stylee">
+  <pagination-controls id="list_pagination" maxSize="10" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+</div>
